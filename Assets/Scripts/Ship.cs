@@ -1,11 +1,18 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
+    private static Ship _instance;
     public int number;
     [SerializeField] private GameObject sailText;
     [SerializeField] private GameObject particles;
+
+    private void Awake()
+    {
+        _instance = this;
+    }
 
     private void Start()
     {
@@ -21,25 +28,21 @@ public class Ship : MonoBehaviour
             if (Physics.Raycast(ray, out var hit))
                 if (hit.collider.gameObject == gameObject)
                 {
-                    var result = gameObject.transform.parent.gameObject.transform.GetComponent<VictoryController>()
+                    var result = gameObject.transform.parent.gameObject.transform
+                        .GetComponent<VictoryController>()
                         .CheckAnswer(number);
-                    if (result)
-                    {
-                        particles.SetActive(true);
-                        Invoke(nameof(HideObject), 1.5f);
-                        Invoke(nameof(ShowObject), 4f);
-                    }
+                    if (!result) return;
+                    particles.SetActive(true);
+                    _instance.StartCoroutine(ShowObject());
                 }
         }
     }
 
-    private void HideObject()
+    private IEnumerator ShowObject()
     {
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
-    }
-
-    private void ShowObject()
-    {
+        yield return new WaitForSeconds(1.5f);
         particles.SetActive(false);
         gameObject.transform.parent.gameObject.transform.GetComponent<VictoryController>().ChangeNumber();
         gameObject.SetActive(true);
