@@ -1,11 +1,10 @@
 using System.Collections;
-using Microsoft.CodeAnalysis.CSharp.Scripting;
 using TMPro;
 using UnityEngine;
 
 public class VictoryController : MonoBehaviour
 {
-    private static Tasks _tasks;
+    private static Dump _dump;
 
     [SerializeField] private GameObject taskText;
     [SerializeField] private GameObject levelText;
@@ -21,7 +20,7 @@ public class VictoryController : MonoBehaviour
 
     public VictoryController()
     {
-        _tasks = new Tasks();
+        _dump = new Dump();
     }
 
     private void Start()
@@ -32,7 +31,7 @@ public class VictoryController : MonoBehaviour
         ChangeNumber(true);
         livesCountText.transform.GetComponent<TextMeshProUGUI>().text = $"Lives: {livesCount}";
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            _tasks.AllTasks[_currentLevelNumber][_currentTaskNumber];
+            _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
         levelText.transform.GetComponent<TextMeshProUGUI>().text = $"Level: {_currentLevelNumber + 1}";
     }
 
@@ -45,7 +44,7 @@ public class VictoryController : MonoBehaviour
         livesCount = 5;
         livesCountText.transform.GetComponent<TextMeshProUGUI>().text = $"Lives: {livesCount}";
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            _tasks.AllTasks[_currentLevelNumber][_currentTaskNumber];
+            _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
         levelText.transform.GetComponent<TextMeshProUGUI>().text = $"Level: {_currentLevelNumber + 1}";
     }
 
@@ -64,11 +63,11 @@ public class VictoryController : MonoBehaviour
     {
         switch (start)
         {
-            case false when _tasks.AllTasks.Count == _currentLevelNumber + 1:
+            case false when _dump.AllTasks.Count == _currentLevelNumber + 1:
                 StartCoroutine(ShowVictory(10));
                 Start();
                 break;
-            case false when _tasks.AllTasks[_currentLevelNumber].Count == _currentTaskNumber + 1:
+            case false when _dump.AllTasks[_currentLevelNumber].Count == _currentTaskNumber + 1:
                 StartCoroutine(ShowVictory());
                 _currentLevelNumber++;
                 levelText.transform.GetComponent<TextMeshProUGUI>().text =
@@ -82,9 +81,7 @@ public class VictoryController : MonoBehaviour
         var currentCorrect = Random.Range(0, _ships.Length);
         for (var i = 0; i < _ships.Length; i++)
         {
-            var expression = _tasks.AllTasks[_currentLevelNumber][_currentTaskNumber];
-            _currentAnswer = CSharpScript.EvaluateAsync<int>(expression).Result;
-
+            _currentAnswer = _dump.AllResults[_currentLevelNumber][_currentTaskNumber];
             _ships[i].gameObject.GetComponent<Ship>().number =
                 i == currentCorrect
                     ? _currentAnswer
@@ -92,7 +89,7 @@ public class VictoryController : MonoBehaviour
         }
 
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            _tasks.AllTasks[_currentLevelNumber][_currentTaskNumber];
+            _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
     }
 
     private IEnumerator ShowVictory(int sec = 5)
