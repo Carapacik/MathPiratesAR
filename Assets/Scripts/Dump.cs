@@ -199,10 +199,9 @@ public class Dump
         "63/7", "21/7", "42/6", "36/6", "18/6", "15/5", "20/5", "16/4", "20/4", "16/4", "12/4",
         "36/4", "32/4", "27/3", "24/3", "18/9", "27/9"
     }; */
-    
+
     //for parse 
     //using Microsoft.CodeAnalysis.CSharp.Scripting;
     //List<string> TasksLevel1 = new(){"16-9",};
     //foreach (var task in TasksLevel1)Console.Write(CSharpScript.EvaluateAsync<int>(task).Result + ", ");
-   
 }

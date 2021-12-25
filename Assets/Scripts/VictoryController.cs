@@ -78,15 +78,13 @@ public class VictoryController : MonoBehaviour
                 break;
         }
 
-        var currentCorrect = Random.Range(0, _ships.Length);
+        var currentCorrect = Random.Range(0, 4);
+        _currentAnswer = _dump.AllResults[_currentLevelNumber][_currentTaskNumber];
         for (var i = 0; i < _ships.Length; i++)
-        {
-            _currentAnswer = _dump.AllResults[_currentLevelNumber][_currentTaskNumber];
-            _ships[i].gameObject.GetComponent<Ship>().number =
-                i == currentCorrect
-                    ? _currentAnswer
-                    : _currentAnswer + Random.Range(-5, 10);
-        }
+            if (i == currentCorrect)
+                _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer;
+            else
+                _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer + Random.Range(-4, 5);
 
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
             _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];

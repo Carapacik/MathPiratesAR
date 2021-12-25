@@ -22,20 +22,16 @@ public class Ship : MonoBehaviour
     private void Update()
     {
         sailText.transform.GetComponent<TextMeshPro>().text = number.ToString();
-        if (Input.GetMouseButtonDown(0))
-        {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit))
-                if (hit.collider.gameObject == gameObject)
-                {
-                    var result = gameObject.transform.parent.gameObject.transform
-                        .GetComponent<VictoryController>()
-                        .CheckAnswer(number);
-                    if (!result) return;
-                    particles.SetActive(true);
-                    _instance.StartCoroutine(ShowObject());
-                }
-        }
+        if (!Input.GetMouseButtonDown(0)) return;
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (!Physics.Raycast(ray, out var hit)) return;
+        if (hit.collider.gameObject != gameObject) return;
+        var correct = gameObject.transform.parent.gameObject.transform
+            .GetComponent<VictoryController>()
+            .CheckAnswer(number);
+        if (!correct) return;
+        particles.SetActive(true);
+        _instance.StartCoroutine(ShowObject());
     }
 
     private IEnumerator ShowObject()
@@ -45,6 +41,7 @@ public class Ship : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         particles.SetActive(false);
         gameObject.transform.parent.gameObject.transform.GetComponent<VictoryController>().ChangeNumber();
+        yield return new WaitForSeconds(0.1f);
         gameObject.SetActive(true);
     }
 }
