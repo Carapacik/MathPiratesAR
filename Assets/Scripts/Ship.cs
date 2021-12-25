@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-    private static Ship _instance;
     public int number;
     [SerializeField] private GameObject sailText;
     [SerializeField] private GameObject particles;
-
-    private void Awake()
-    {
-        _instance = this;
-    }
 
     private void Start()
     {
@@ -26,22 +20,19 @@ public class Ship : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out var hit)) return;
         if (hit.collider.gameObject != gameObject) return;
-        var correct = gameObject.transform.parent.gameObject.transform
+        gameObject.transform.parent.gameObject.transform
             .GetComponent<VictoryController>()
             .CheckAnswer(number);
-        if (!correct) return;
-        particles.SetActive(true);
-        _instance.StartCoroutine(ShowObject());
     }
 
-    private IEnumerator ShowObject()
+    public IEnumerator ShipCoroutine()
     {
+        particles.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
         yield return new WaitForSeconds(1.5f);
         particles.SetActive(false);
         gameObject.transform.parent.gameObject.transform.GetComponent<VictoryController>().ChangeNumber();
-        yield return new WaitForSeconds(0.1f);
         gameObject.SetActive(true);
     }
 }

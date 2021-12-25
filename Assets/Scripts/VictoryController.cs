@@ -14,6 +14,7 @@ public class VictoryController : MonoBehaviour
     [SerializeField] private int livesCount = 5;
 
     private int _currentAnswer;
+    private int _currentCorrectIndex;
     private int _currentLevelNumber;
     private int _currentTaskNumber;
     private GameObject[] _ships;
@@ -48,15 +49,21 @@ public class VictoryController : MonoBehaviour
         levelText.transform.GetComponent<TextMeshProUGUI>().text = $"Level: {_currentLevelNumber + 1}";
     }
 
-    public bool CheckAnswer(int number)
+    public void CheckAnswer(int number)
     {
-        if (number == _currentAnswer) return true;
-
-        livesCount--;
-        livesCountText.transform.GetComponent<TextMeshProUGUI>().text = $"Lives: {livesCount}";
-        StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Island>()
-            .ShowParticles());
-        return false;
+        if (number == _currentAnswer)
+        {
+            StartCoroutine(gameObject.transform.GetChild(_currentCorrectIndex + 1).gameObject.transform
+                .GetComponent<Ship>()
+                .ShipCoroutine());
+        }
+        else
+        {
+            livesCount--;
+            livesCountText.transform.GetComponent<TextMeshProUGUI>().text = $"Lives: {livesCount}";
+            StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Island>()
+                .IslandParticlesCoroutine());
+        }
     }
 
     public void ChangeNumber(bool start = false)
@@ -78,10 +85,10 @@ public class VictoryController : MonoBehaviour
                 break;
         }
 
-        var currentCorrect = Random.Range(0, 4);
+        _currentCorrectIndex = Random.Range(0, 4);
         _currentAnswer = _dump.AllResults[_currentLevelNumber][_currentTaskNumber];
         for (var i = 0; i < _ships.Length; i++)
-            if (i == currentCorrect)
+            if (i == _currentCorrectIndex)
                 _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer;
             else
                 _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer + Random.Range(-4, 5);
@@ -92,9 +99,11 @@ public class VictoryController : MonoBehaviour
 
     private IEnumerator ShowVictory(int sec = 5)
     {
+        foreach (var ship in _ships) ship.gameObject.GetComponent<Ship>().enabled = false;
         victoryText.SetActive(true);
         yield return new WaitForSeconds(sec);
         victoryText.SetActive(false);
+        foreach (var ship in _ships) ship.gameObject.GetComponent<Ship>().enabled = true;
     }
 
     private IEnumerator ShowGameOver(int sec = 5)
