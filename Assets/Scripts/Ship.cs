@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ship : MonoBehaviour
 {
     public int number;
+    public int shipIndex;
     [SerializeField] private GameObject sailText;
     [SerializeField] private GameObject particles;
 
@@ -22,7 +23,7 @@ public class Ship : MonoBehaviour
         if (hit.collider.gameObject != gameObject) return;
         gameObject.transform.parent.gameObject.transform
             .GetComponent<VictoryController>()
-            .CheckAnswer(number);
+            .CheckAnswer(number, shipIndex);
     }
 
     public IEnumerator ShipCoroutine()

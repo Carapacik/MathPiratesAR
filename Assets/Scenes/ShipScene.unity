@@ -446,11 +446,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2767663698509518614, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_Name
-      value: Ship 3
+      value: Ship 4
       objectReference: {fileID: 0}
     - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: number
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
+      propertyPath: shipIndex
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3252557519575780780, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_RootOrder
@@ -1115,11 +1119,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2767663698509518614, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_Name
-      value: Ship 2
+      value: Ship 3
       objectReference: {fileID: 0}
     - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: number
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
+      propertyPath: shipIndex
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3252557519575780780, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_RootOrder
@@ -1748,11 +1756,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2767663698509518614, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_Name
-      value: Ship 0
+      value: Ship 1
       objectReference: {fileID: 0}
     - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: number
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
+      propertyPath: shipIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3252557519575780780, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_RootOrder
@@ -2154,11 +2166,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2767663698509518614, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_Name
-      value: Ship 1
+      value: Ship 2
       objectReference: {fileID: 0}
     - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: number
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767663698509518615, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
+      propertyPath: shipIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3252557519575780780, guid: 072b28ad19529a449b727ef52f0b72ce, type: 3}
       propertyPath: m_RootOrder

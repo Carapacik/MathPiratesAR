@@ -14,7 +14,6 @@ public class VictoryController : MonoBehaviour
     [SerializeField] private int livesCount = 5;
 
     private int _currentAnswer;
-    private int _currentCorrectIndex;
     private int _currentLevelNumber;
     private int _currentTaskNumber;
     private GameObject[] _ships;
@@ -49,11 +48,11 @@ public class VictoryController : MonoBehaviour
         levelText.transform.GetComponent<TextMeshProUGUI>().text = $"Level: {_currentLevelNumber + 1}";
     }
 
-    public void CheckAnswer(int number)
+    public void CheckAnswer(int number, int shipIndex)
     {
         if (number == _currentAnswer)
         {
-            StartCoroutine(gameObject.transform.GetChild(_currentCorrectIndex + 1).gameObject.transform
+            StartCoroutine(gameObject.transform.GetChild(shipIndex).gameObject.transform
                 .GetComponent<Ship>()
                 .ShipCoroutine());
         }
@@ -85,13 +84,13 @@ public class VictoryController : MonoBehaviour
                 break;
         }
 
-        _currentCorrectIndex = Random.Range(0, 4);
+        var currentCorrectIndex = Random.Range(0, 4);
         _currentAnswer = _dump.AllResults[_currentLevelNumber][_currentTaskNumber];
         for (var i = 0; i < _ships.Length; i++)
-            if (i == _currentCorrectIndex)
+            if (i == currentCorrectIndex)
                 _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer;
             else
-                _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer + Random.Range(-4, 5);
+                _ships[i].gameObject.GetComponent<Ship>().number = _currentAnswer + Random.Range(-1, 3);
 
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
             _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
