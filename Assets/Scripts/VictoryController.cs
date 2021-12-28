@@ -37,9 +37,9 @@ public class VictoryController : MonoBehaviour
         ChangeNumber(true);
         livesCountText.transform.GetComponent<TextMeshProUGUI>().text = livesCount.ToString();
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
+            $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
         levelText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_currentLevelNumber + 1} - {_currentTaskNumber + 1}";
+            $"{_currentLevelNumber + 1} : {_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
     }
 
     public void CheckAnswer(int number, int shipIndex)
@@ -72,12 +72,12 @@ public class VictoryController : MonoBehaviour
                 StartCoroutine(ShowVictory());
                 _currentLevelNumber++;
                 levelText.transform.GetComponent<TextMeshProUGUI>().text =
-                    $"{_currentLevelNumber + 1} - {_currentTaskNumber + 1}";
+                    $"{_currentLevelNumber + 1} : {_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
                 break;
             case false:
                 _currentTaskNumber++;
                 levelText.transform.GetComponent<TextMeshProUGUI>().text =
-                    $"{_currentLevelNumber + 1} - {_currentTaskNumber + 1}";
+                    $"{_currentLevelNumber + 1} : {_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
                 break;
         }
 
@@ -89,7 +89,7 @@ public class VictoryController : MonoBehaviour
                 : _currentAnswer + Random.Range(-1, 3);
 
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
+            $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
     }
 
     private IEnumerator ShowVictory(int sec = 5)
@@ -110,9 +110,9 @@ public class VictoryController : MonoBehaviour
         _currentTaskNumber = 0;
         livesCount = 5;
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            _dump.AllTasks[_currentLevelNumber][_currentTaskNumber];
+            $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
         levelText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_currentLevelNumber + 1} - {_currentTaskNumber + 1}";
+            $"{_currentLevelNumber + 1} : {_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
         livesCountText.transform.GetComponent<TextMeshProUGUI>().text = livesCount.ToString();
         foreach (var ship in _ships) ship.gameObject.GetComponent<Ship>().enabled = true;
     }
