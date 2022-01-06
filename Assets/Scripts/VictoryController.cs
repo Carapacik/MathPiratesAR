@@ -1,21 +1,30 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryController : MonoBehaviour
 {
     private static Dump _dump;
 
+    [SerializeField] private GameObject heartObject;
+    [SerializeField] private GameObject errorObject;
+    [SerializeField] private GameObject correctObject;
+
+    [SerializeField] private GameObject heartCountText;
+    [SerializeField] private GameObject errorCountText;
+    [SerializeField] private GameObject correctCountText;
     [SerializeField] private GameObject taskText;
     [SerializeField] private GameObject levelText;
-    [SerializeField] private GameObject livesCountText;
     [SerializeField] private GameObject looseObject;
     [SerializeField] private GameObject victoryObject;
-    [SerializeField] private int livesCount = 5;
-
+    private int _correctsCount;
     private int _currentAnswer;
     private int _currentLevelNumber;
     private int _currentTaskNumber;
+    private int _errorsCount;
+
+    private int _livesCount = 5;
     private GameObject[] _ships;
 
     public VictoryController()
@@ -25,6 +34,19 @@ public class VictoryController : MonoBehaviour
 
     private void Start()
     {
+        if (ScenesInfo.CrossSceneInformation)
+        {
+            heartObject.SetActive(true);
+            errorObject.SetActive(false);
+            correctObject.SetActive(false);
+        }
+        else
+        {
+            heartObject.SetActive(false);
+            errorObject.SetActive(true);
+            correctObject.SetActive(true);
+        }
+
         LoadLevel(true);
     }
 
@@ -35,7 +57,7 @@ public class VictoryController : MonoBehaviour
         _currentTaskNumber = 0;
         _ships = GameObject.FindGameObjectsWithTag("Ship");
         ChangeNumber(true);
-        livesCountText.transform.GetComponent<TextMeshProUGUI>().text = livesCount.ToString();
+        SetTextToString();
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
             $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
         levelText.transform.GetComponent<TextMeshProUGUI>().text =
@@ -48,15 +70,28 @@ public class VictoryController : MonoBehaviour
         {
             StartCoroutine(gameObject.transform.GetChild(shipIndex).gameObject.transform.GetComponent<Ship>()
                 .ShipCoroutine());
+            if (ScenesInfo.CrossSceneInformation) return;
+            _correctsCount++;
+            SetTextToString();
         }
         else
         {
-            livesCount--;
-            livesCountText.transform.GetComponent<TextMeshProUGUI>().text = livesCount.ToString();
-            StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Island>()
-                .IslandParticlesCoroutine());
-            if (livesCount >= 0) return;
-            StartCoroutine(ShowGameOver());
+            if (ScenesInfo.CrossSceneInformation)
+            {
+                _livesCount--;
+                SetTextToString();
+                StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Island>()
+                    .IslandParticlesCoroutine());
+                if (_livesCount >= 0) return;
+                StartCoroutine(ShowGameOver());
+            }
+            else
+            {
+                _errorsCount++;
+                SetTextToString();
+                StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Island>()
+                    .IslandParticlesCoroutine());
+            }
         }
     }
 
@@ -66,7 +101,7 @@ public class VictoryController : MonoBehaviour
         {
             case false when _dump.AllTasks.Count == _currentLevelNumber + 1:
                 StartCoroutine(ShowVictory(10));
-                LoadLevel();
+                SceneManager.LoadScene("MainScene");
                 break;
             case false when _dump.AllTasks[_currentLevelNumber].Count == _currentTaskNumber + 1:
                 StartCoroutine(ShowVictory());
@@ -108,12 +143,25 @@ public class VictoryController : MonoBehaviour
         yield return new WaitForSeconds(sec);
         looseObject.SetActive(false);
         _currentTaskNumber = 0;
-        livesCount = 5;
+        _livesCount = 5;
+        SetTextToString();
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
             $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
         levelText.transform.GetComponent<TextMeshProUGUI>().text =
             $"{_currentLevelNumber + 1} : {_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
-        livesCountText.transform.GetComponent<TextMeshProUGUI>().text = livesCount.ToString();
         foreach (var ship in _ships) ship.gameObject.GetComponent<Ship>().enabled = true;
+    }
+
+    private void SetTextToString()
+    {
+        if (ScenesInfo.CrossSceneInformation)
+        {
+            heartCountText.transform.GetComponent<TextMeshProUGUI>().text = _livesCount.ToString();
+        }
+        else
+        {
+            errorCountText.transform.GetComponent<TextMeshProUGUI>().text = _errorsCount.ToString();
+            correctCountText.transform.GetComponent<TextMeshProUGUI>().text = _correctsCount.ToString();
+        }
     }
 }
