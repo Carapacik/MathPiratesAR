@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: ATxHTsf/////AAABmUa8A/msrkVJviHO9tE8cBVbY7fdZRNzmtokCS+8qaDZf/JOBsVN/hYwIVGDnF5TLPcjI04USosA7+t0p7xfBzVuccxZPSrOPimj79IA3rBImQy7G5m2sIPf5KOR6ibFt8R9HceqS9MHxW6XxhAsu7DVSXVIkG/NmEdIHIbPv31sCyIMFziP2/QccASGoxsh0gxOQj5rWbvRHIe54ji9cIzJdcsIpfgBm003XR/1TOC/xaqwhHY53IMi4CUChcz5TSWas12nvm3p/OVwhmdKFRYNy722lqlEBCmNjn3mvUvpggm3NK8V/ur76VYnHaTtCg1u6tRMrbRJS6yfMUXJBCaSyHraebmbHhIekGH3MXkT
-    ufoLicenseKey: QWNtdnh2UC8vLy8vQUFBQUtJd1hCdGxSZWtnU214TjQzVC9PcHlWV1hZUThVdlh3bmp2TDd3R2RMT25tRUlwRzA4QUQ3YStVRlgvbkNsWTBOUXMxOGF0enNTSmpPSmlFcVc2N2taeHBWUmt2TWpRM3ZVZHR2cTA0V25VTkVjdmJ5Tkh1b3JVK25xTzlaZUdnbDZ4Q3Jwb0Y3ZFBWRGRTQzlnUDVUUFhKVUxOd3ZKUXhmeWhDajFlbWFRWjhHMUpDaUVSdTNPWmh0eGM1Nm9jSG9WSmtycHZOaE55NlJHNVVWaElSaVRIVmNqdjVIN0ZSTjRpMGhsR0ZFWmQrRXlEeUV5K1FzT1pwOVdJUHV2VjA2ZnZmUXBMVklCVXRyT0hDN3VUTjliMnl2Vld6elJiNTlWRCtDcXhsYUUrcGxOTzA3N1FscTd6YTRGdEJQTzhHZTNnUU41d0FMU1JEbVJPUjhSbEhVWG0ybUVaeHE5SnY1Yy8wTzBkQUMrZ1Y=
+    vuforiaLicenseKey: AVWV4w3/////AAABmfMCK0NVT0J7jw2pK9mXu044EWDVwmx/ApIJjKDMidORNnCsAr/ILI4zBhiwNybyAL2RB11ImmmGsy16cCWWMkcYZUsrvGG0NVhv44OQj3Xb9heZk1Wuuui+o+vXrKcHuahSjKn4/tszMoYXBM3fyiC/E0QgnAYiou0ke7Q5tG+SU3T3Uw5tp8SZ8In7vnYULunOTzG7gVeSoMsLDOshScarHL8iPJuyCTv6Hf+GyBoCtHWmKIl8VJcpvhHzjEbpUv7yBjRmFEDV/IF4jExS6Gfc8Jni8YJVBjnAYUsshsYkR+Nw8JUW7nm1BHtb5tQ96WX9PeFL8j7cNSFBYbff0CF6qd+PdglSQYwO2Cmx4Z+0
+    ufoLicenseKey: QVN0NGN6Ly8vLy8vQUFBQUtPV2FJMkErdTBHb3Q3QW9qVnFvLzRjS1QzeFBGRmVXODE4NEROMGFwb0JXdWZ0RUk3OGNjSWJPdGZFRXZXb054QkNSK210bW5zeVNuL2hKTWR2U0NwdFJIb3V5TmRNbTNuSGNVRHJUSVVQWnlONCtJSWovVTYyVFpLZVRRR1dyTWF4V0ZPUHd4bDBHZGI2SzZ3OTBiRWF2aHV4cW51aWRBazJ1bzdxd3dwayt6bXpUTnVNeEl6cDMwNWQ1SFBuVkw2WGNwbFh3V2Y3UTFxajljcVUyY2R2L0RTTWdtZHk0dHVLVEl4c24xQklGRkh6RjkvVmhaeENjKzE0dVdkQkpXWFFpUEZacVVRTWE0NlJyVzVJemduOVRGQk9rSVVRczQyazFHbGs4ZytOcGI3YkVWRER4d2o2cUpJOHNsRzUvdUk2QitVMW9tSGFrbGo2UWNMSERSdkVKQnRNSVNST2ZseksvY3ZjZkpGM2k=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
@@ -24,7 +24,7 @@ MonoBehaviour:
     modelTargetRecoWhileExtendedTracked: 1
     shareRecordingsInITunes: 0
     version: 10.3.2
-    eulaAcceptedVersions: '{"Values":["10.3","9.8","10.2"]}'
+    eulaAcceptedVersions: '{"Values":["9.8","10.2","10.3"]}'
   database:
     disableModelExtraction: 0
   shaders:
@@ -33,7 +33,7 @@ MonoBehaviour:
     numDivisions: 2
     videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a, type: 3}
     unlitShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-    videoBackgroundEnabled: 1
+    videoBackgroundEnabled: 0
   deviceTracker:
     autoStartTracker: 1
     arcoreRequirement: 1
