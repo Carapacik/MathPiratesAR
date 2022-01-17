@@ -26,7 +26,7 @@ public class VictoryController : MonoBehaviour
     private int _currentTaskNumber;
     private int _errorsCount;
 
-    private int _livesCount = 5;
+    private int _livesCount;
     private GameObject[] _ships;
 
     public VictoryController()
@@ -59,6 +59,7 @@ public class VictoryController : MonoBehaviour
         if (start) _currentLevelNumber = 0;
 
         _currentTaskNumber = 0;
+        _livesCount = 5;
         ChangeNumber(true);
         SetTextToString();
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
@@ -150,14 +151,8 @@ public class VictoryController : MonoBehaviour
         foreach (var ship in _ships) ship.gameObject.GetComponent<ShipScript>().enabled = false;
         loseObject.SetActive(true);
         yield return new WaitForSeconds(sec);
+        LoadLevel();
         loseObject.SetActive(false);
-        _currentTaskNumber = 0;
-        _livesCount = 5;
-        SetTextToString();
-        taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
-        taskNumberText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
         foreach (var ship in _ships) ship.gameObject.GetComponent<ShipScript>().enabled = true;
     }
 
