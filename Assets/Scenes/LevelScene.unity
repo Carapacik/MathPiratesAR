@@ -1684,7 +1684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013665620186, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000013665620186, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1724,7 +1724,7 @@ PrefabInstance:
       objectReference: {fileID: 1533878129}
     - target: {fileID: 114000012341209002, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
       propertyPath: noise
-      value: 0.7
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 114000012341209002, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
       propertyPath: sizeX
@@ -1733,6 +1733,10 @@ PrefabInstance:
     - target: {fileID: 114000012341209002, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
       propertyPath: sizeZ
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012341209002, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
+      propertyPath: receiveShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000012341209002, guid: c1f03fd4e96302841adf5646cd8a98cd, type: 3}
       propertyPath: enableReflection

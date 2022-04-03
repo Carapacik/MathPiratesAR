@@ -12,7 +12,7 @@ public class AddVuforiaEnginePackage
 {
     static readonly string sPackagesPath = Path.Combine(Application.dataPath, "..", "Packages");
     static readonly string sManifestJsonPath = Path.Combine(sPackagesPath, "manifest.json");
-    const string VUFORIA_VERSION = "10.3.2";
+    const string VUFORIA_VERSION = "10.5.5";
     const string VUFORIA_TAR_FILE_DIR = "Assets/Editor/Migration/";
     const string DEPENDENCIES_DIR = "Assets/Resources/VuforiaDependencies";
     const string PACKAGES_RELATIVE_PATH = "Packages";
@@ -186,7 +186,7 @@ public class AddVuforiaEnginePackage
         var tarFilePaths = Directory.GetFiles(dependencyDirectory).Where(f => f.EndsWith(".tgz"));
 
         // Define a regular expression for repeated words.
-        var rx = new Regex(@"(([a-z]+)(\.[a-z]+)*)(\-((\d+)\.(\d+)\.(\d+)))*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        var rx = new Regex(@"(([a-z]+)(\.[a-z]+)+)(\-((\d+)\.(\d+)\.(\d+)))*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         var packageDescriptions = new List<PackageDescription>();
 
