@@ -12,7 +12,7 @@ public class AddVuforiaEnginePackage
 {
     static readonly string sPackagesPath = Path.Combine(Application.dataPath, "..", "Packages");
     static readonly string sManifestJsonPath = Path.Combine(sPackagesPath, "manifest.json");
-    const string VUFORIA_VERSION = "10.5.5";
+    const string VUFORIA_VERSION = "10.6.3";
     const string VUFORIA_TAR_FILE_DIR = "Assets/Editor/Migration/";
     const string DEPENDENCIES_DIR = "Assets/Resources/VuforiaDependencies";
     const string PACKAGES_RELATIVE_PATH = "Packages";
