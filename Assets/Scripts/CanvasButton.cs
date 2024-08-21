@@ -5,7 +5,7 @@ public class CanvasButton : MonoBehaviour
 {
     public void SelectScene(bool isHeartScene)
     {
-        ScenesInfo.IsHeartScene = isHeartScene;
+        ScenesInfo.isHeartScene = isHeartScene;
         SceneManager.LoadScene(1);
     }
 }

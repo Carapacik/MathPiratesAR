@@ -38,7 +38,7 @@ public class Dump
     };
 
     private static readonly List<int> Result3 = new()
-        {7, 8, 9, 9, 9, 4, 8, 6, 10, 4, 6, 8, 10, 5, 7, 9, 10, 5, 7, 9, 6, 7, 9, 6, 8, 10, 8};
+        { 7, 8, 9, 9, 9, 4, 8, 6, 10, 4, 6, 8, 10, 5, 7, 9, 10, 5, 7, 9, 6, 7, 9, 6, 8, 10, 8 };
 
     private static readonly List<string> Tasks4 = new()
     {

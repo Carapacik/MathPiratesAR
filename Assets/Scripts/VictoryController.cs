@@ -6,28 +6,28 @@ using UnityEngine.SceneManagement;
 public class VictoryController : MonoBehaviour
 {
     private static Dump _dump;
-
-    [SerializeField] private GameObject livesObject;
-    [SerializeField] private GameObject errorsObject;
     [SerializeField] private GameObject correctsObject;
-    [SerializeField] private GameObject loseObject;
-    [SerializeField] private GameObject victoryObject;
-
-    [SerializeField] private GameObject livesText;
-    [SerializeField] private GameObject errorsText;
     [SerializeField] private GameObject correctsText;
-    [SerializeField] private GameObject taskText;
-    [SerializeField] private GameObject taskNumberText;
+    [SerializeField] private GameObject errorsObject;
+    [SerializeField] private GameObject errorsText;
     [SerializeField] private GameObject levelNumberText;
 
-    private int _correctsCount;
-    private int _currentAnswer;
-    private int _currentLevelNumber;
-    private int _currentTaskNumber;
-    private int _errorsCount;
+    [SerializeField] private GameObject livesObject;
 
-    private int _livesCount;
-    private GameObject[] _ships;
+    [SerializeField] private GameObject livesText;
+    [SerializeField] private GameObject loseObject;
+    [SerializeField] private GameObject taskNumberText;
+    [SerializeField] private GameObject taskText;
+    [SerializeField] private GameObject victoryObject;
+
+    private int m_CorrectsCount;
+    private int m_CurrentAnswer;
+    private int m_CurrentLevelNumber;
+    private int m_CurrentTaskNumber;
+    private int m_ErrorsCount;
+
+    private int m_LivesCount;
+    private GameObject[] m_Ships;
 
     public VictoryController()
     {
@@ -36,7 +36,7 @@ public class VictoryController : MonoBehaviour
 
     private void Start()
     {
-        if (ScenesInfo.IsHeartScene)
+        if (ScenesInfo.isHeartScene)
         {
             livesObject.SetActive(true);
             errorsObject.SetActive(false);
@@ -49,52 +49,52 @@ public class VictoryController : MonoBehaviour
             correctsObject.SetActive(true);
         }
 
-        _ships = GameObject.FindGameObjectsWithTag("Ship");
+        m_Ships = GameObject.FindGameObjectsWithTag("Ship");
 
         LoadLevel(true);
     }
 
     private void LoadLevel(bool start = false)
     {
-        if (start) _currentLevelNumber = 0;
+        if (start) m_CurrentLevelNumber = 0;
 
-        _currentTaskNumber = 0;
-        _livesCount = 5;
+        m_CurrentTaskNumber = 0;
+        m_LivesCount = 5;
         ChangeNumber(true);
         SetTextToString();
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
+            $"{_dump.AllTasks[m_CurrentLevelNumber][m_CurrentTaskNumber]}=?";
         taskNumberText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
-        levelNumberText.transform.GetComponent<TextMeshProUGUI>().text = $"{_currentLevelNumber + 1}";
+            $"{m_CurrentTaskNumber + 1}/{_dump.AllTasks[m_CurrentLevelNumber].Count}";
+        levelNumberText.transform.GetComponent<TextMeshProUGUI>().text = $"{m_CurrentLevelNumber + 1}";
     }
 
     public void CheckAnswer(int number, int shipIndex)
     {
-        if (number == _currentAnswer)
+        if (number == m_CurrentAnswer)
         {
             StartCoroutine(gameObject.transform.GetChild(shipIndex).gameObject.transform
                 .GetComponent<ShipScript>()
                 .ShipCoroutine());
-            if (ScenesInfo.IsHeartScene) return;
-            _correctsCount++;
+            if (ScenesInfo.isHeartScene) return;
+            m_CorrectsCount++;
             SetTextToString();
         }
         else
         {
-            if (ScenesInfo.IsHeartScene)
+            if (ScenesInfo.isHeartScene)
             {
-                _livesCount--;
+                m_LivesCount--;
                 SetTextToString();
                 StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform
                     .GetComponent<IslandScript>()
                     .IslandParticlesCoroutine());
-                if (_livesCount >= 0) return;
+                if (m_LivesCount >= 0) return;
                 StartCoroutine(ShowGameOver());
             }
             else
             {
-                _errorsCount++;
+                m_ErrorsCount++;
                 SetTextToString();
                 StartCoroutine(gameObject.transform.GetChild(0).gameObject.transform
                     .GetComponent<IslandScript>()
@@ -107,65 +107,65 @@ public class VictoryController : MonoBehaviour
     {
         switch (start)
         {
-            case false when _dump.AllTasks.Count == _currentLevelNumber + 1:
+            case false when _dump.AllTasks.Count == m_CurrentLevelNumber + 1:
                 StartCoroutine(ShowVictory(10));
                 SceneManager.LoadScene(0);
                 return;
-            case false when _dump.AllTasks[_currentLevelNumber].Count == _currentTaskNumber + 1:
+            case false when _dump.AllTasks[m_CurrentLevelNumber].Count == m_CurrentTaskNumber + 1:
                 StartCoroutine(ShowVictory());
-                _currentLevelNumber++;
-                _currentTaskNumber = 0;
+                m_CurrentLevelNumber++;
+                m_CurrentTaskNumber = 0;
                 taskNumberText.transform.GetComponent<TextMeshProUGUI>().text =
-                    $"{_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
-                levelNumberText.transform.GetComponent<TextMeshProUGUI>().text = $"{_currentLevelNumber + 1}";
+                    $"{m_CurrentTaskNumber + 1}/{_dump.AllTasks[m_CurrentLevelNumber].Count}";
+                levelNumberText.transform.GetComponent<TextMeshProUGUI>().text = $"{m_CurrentLevelNumber + 1}";
                 break;
             case false:
-                _currentTaskNumber++;
+                m_CurrentTaskNumber++;
                 taskNumberText.transform.GetComponent<TextMeshProUGUI>().text =
-                    $"{_currentTaskNumber + 1}/{_dump.AllTasks[_currentLevelNumber].Count}";
+                    $"{m_CurrentTaskNumber + 1}/{_dump.AllTasks[m_CurrentLevelNumber].Count}";
                 break;
         }
 
         var currentCorrectIndex = Random.Range(0, 4);
-        _currentAnswer = _dump.AllResults[_currentLevelNumber][_currentTaskNumber];
-        for (var i = 0; i < _ships.Length; i++)
-            _ships[i].gameObject.GetComponent<ShipScript>().number = i == currentCorrectIndex
-                ? _currentAnswer
-                : _currentAnswer + Random.Range(-2, 3);
+        m_CurrentAnswer = _dump.AllResults[m_CurrentLevelNumber][m_CurrentTaskNumber];
+        for (var i = 0; i < m_Ships.Length; i++)
+            m_Ships[i].gameObject.GetComponent<ShipScript>().number = i == currentCorrectIndex
+                ? m_CurrentAnswer
+                : m_CurrentAnswer + Random.Range(-2, 3);
 
         taskText.transform.GetComponent<TextMeshProUGUI>().text =
-            $"{_dump.AllTasks[_currentLevelNumber][_currentTaskNumber]}=?";
+            $"{_dump.AllTasks[m_CurrentLevelNumber][m_CurrentTaskNumber]}=?";
     }
 
     private IEnumerator ShowVictory(int sec = 5)
     {
-        foreach (var ship in _ships) ship.gameObject.GetComponent<ShipScript>().enabled = false;
+        foreach (var ship in m_Ships) ship.gameObject.GetComponent<ShipScript>().enabled = false;
         victoryObject.SetActive(true);
         yield return new WaitForSeconds(sec);
         victoryObject.SetActive(false);
-        foreach (var ship in _ships) ship.gameObject.GetComponent<ShipScript>().enabled = true;
+        foreach (var ship in m_Ships) ship.gameObject.GetComponent<ShipScript>().enabled = true;
     }
 
     private IEnumerator ShowGameOver(int sec = 5)
     {
-        foreach (var ship in _ships) ship.gameObject.GetComponent<ShipScript>().enabled = false;
+        foreach (var ship in m_Ships) ship.gameObject.GetComponent<ShipScript>().enabled = false;
         loseObject.SetActive(true);
         yield return new WaitForSeconds(sec);
         LoadLevel();
         loseObject.SetActive(false);
-        foreach (var ship in _ships) ship.gameObject.GetComponent<ShipScript>().enabled = true;
+        foreach (var ship in m_Ships) ship.gameObject.GetComponent<ShipScript>().enabled = true;
     }
 
     private void SetTextToString()
     {
-        if (ScenesInfo.IsHeartScene)
+        if (ScenesInfo.isHeartScene)
         {
-            livesText.transform.GetComponent<TextMeshProUGUI>().text = _livesCount.ToString();
+            livesText.transform.GetComponent<TextMeshProUGUI>().text = m_LivesCount.ToString();
         }
         else
         {
-            errorsText.transform.GetComponent<TextMeshProUGUI>().text = _errorsCount.ToString();
-            correctsText.transform.GetComponent<TextMeshProUGUI>().text = _correctsCount.ToString();
+            errorsText.transform.GetComponent<TextMeshProUGUI>().text = m_ErrorsCount.ToString();
+            correctsText.transform.GetComponent<TextMeshProUGUI>().text = m_CorrectsCount.ToString();
         }
     }
 }

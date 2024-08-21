@@ -5,25 +5,28 @@ using UnityEngine;
 public class ShipScript : MonoBehaviour
 {
     public int number;
-    public int shipIndex;
-    [SerializeField] private GameObject sailText;
     [SerializeField] private GameObject particles;
+    [SerializeField] private GameObject sailText;
+    public int shipIndex;
+    private TextMeshPro m_TextMeshPro;
+    private VictoryController m_VictoryController;
 
     private void Start()
     {
+        m_VictoryController = gameObject.transform.parent.gameObject.transform
+            .GetComponent<VictoryController>();
+        m_TextMeshPro = sailText.transform.GetComponent<TextMeshPro>();
         sailText.transform.GetComponent<TextMeshPro>().text = number.ToString();
     }
 
     private void Update()
     {
-        sailText.transform.GetComponent<TextMeshPro>().text = number.ToString();
+        m_TextMeshPro.text = number.ToString();
         if (!Input.GetMouseButtonDown(0)) return;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out var hit)) return;
         if (hit.collider.gameObject != gameObject) return;
-        gameObject.transform.parent.gameObject.transform
-            .GetComponent<VictoryController>()
-            .CheckAnswer(number, shipIndex);
+        m_VictoryController.CheckAnswer(number, shipIndex);
     }
 
     public IEnumerator ShipCoroutine()

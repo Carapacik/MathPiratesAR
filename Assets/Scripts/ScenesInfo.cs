@@ -1,4 +1,4 @@
 ﻿public static class ScenesInfo
 {
-    public static bool IsHeartScene { get; set; }
+    public static bool isHeartScene { get; set; }
 }
