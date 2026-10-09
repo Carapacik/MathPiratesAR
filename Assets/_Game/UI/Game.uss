@@ -1,0 +1,62 @@
+.screen { position: absolute; left: 0; top: 0; right: 0; bottom: 0; color: rgb(30, 43, 24); padding: 24px 32px 18px; -unity-font-definition: url("../Art/Fonts/Montserrat-Medium.ttf"); }
+.brand, .hero, .expression, .modal-title, Button { -unity-font-definition: url("../Art/Fonts/Montserrat-Bold.ttf"); -unity-font-style: normal; }
+.header { height: 44px; flex-direction: row; align-items: center; justify-content: space-between; }
+.brand { font-size: 23px; -unity-font-style: bold; letter-spacing: 3px; }
+.eyebrow { font-size: 13px; letter-spacing: 2px; color: rgb(91, 105, 83); white-space: normal; }
+.unity-button { background-image: none; border-width: 0; border-radius: 12px; padding: 10px 18px; color: rgb(30, 43, 24); background-color: rgb(242, 246, 238); font-size: 16px; -unity-font-style: normal; min-height: 44px; }
+.unity-button:hover { background-color: rgb(226, 239, 214); }
+.unity-button:active { scale: 0.97 0.97; }
+.unity-button:disabled { opacity: 0.4; background-color: rgb(242, 246, 238); }
+.quiet { background-color: rgb(242, 246, 238); font-size: 18px; min-height: 54px; min-width: 148px; }
+.primary { background-color: rgb(141, 215, 58); color: rgb(23, 39, 12); height: 64px; font-size: 22px; margin-top: 12px; }
+.primary:hover { background-color: rgb(171, 234, 106); }
+.menu { position: absolute; left: 32px; top: 96px; width: 440px; }
+.hero { font-size: 42px; -unity-font-style: bold; white-space: normal; margin-bottom: 14px; }
+.description { font-size: 18px; white-space: normal; color: rgb(78, 93, 70); margin-bottom: 14px; }
+.hint { font-size: 14px; white-space: normal; color: rgb(91, 105, 83); margin: 8px 0 10px; }
+.row { flex-direction: row; }
+.mode { flex-grow: 1; margin-right: 6px; font-size: 17px; min-height: 54px; border-width: 1px; border-color: rgb(210, 221, 202); }
+.selected { border-color: rgb(141, 215, 58); color: rgb(48, 88, 21); background-color: rgb(232, 247, 218); }
+.map { position: absolute; right: 32px; top: 88px; width: 260px; bottom: 64px; background-color: rgb(255, 255, 255); border-radius: 18px; padding: 18px; }
+.level-list { margin-top: 12px; }
+.unity-scroller--vertical { width: 8px; }
+.unity-scroller__low-button, .unity-scroller__high-button { display: none; }
+.unity-base-slider__tracker { background-color: rgb(237, 242, 232); border-width: 0; }
+.unity-base-slider__dragger { background-color: rgb(141, 215, 58); border-width: 0; border-radius: 4px; }
+.section-title { color: rgb(61, 111, 27); font-size: 15px; margin: 14px 0 8px; white-space: normal; }
+.level-button { margin-bottom: 6px; font-size: 14px; -unity-text-align: middle-left; min-height: 48px; }
+.hud { position: absolute; left: 32px; right: 32px; top: 16px; bottom: 64px; }
+.status-row { position: absolute; left: 0; top: 0; flex-direction: column; align-items: flex-start; max-width: 290px; }
+.level-label, .score { font-size: 18px; background-color: rgb(255, 255, 255); padding: 10px 16px; border-radius: 12px; }
+.question-card { align-self: center; align-items: center; background-color: rgb(255, 255, 255); padding: 8px 24px; border-radius: 18px; margin-top: 0; min-width: 340px; }
+.expression { font-size: 42px; -unity-font-style: bold; }
+.feedback { font-size: 17px; color: rgb(61, 111, 27); }
+.answers { position: absolute; bottom: 0; align-self: center; flex-direction: row; }
+.answer { width: 130px; height: 66px; margin: 0 8px; font-size: 28px; border-width: 2px; border-color: rgb(141, 215, 58); background-color: rgb(255, 255, 255); }
+.ship-labels { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.ship-badge { position: absolute; width: 64px; height: 44px; font-size: 23px; padding: 0; color: rgb(35, 31, 16); background-color: rgba(0, 0, 0, 0); border-radius: 10px; }
+.ship-badge:hover { background-color: rgba(141, 215, 58, .65); }
+.ship-badge:disabled { background-color: rgba(0, 0, 0, 0); opacity: .7; }
+.placement { position: absolute; bottom: 80px; align-self: center; align-items: stretch; background-color: rgb(255, 255, 255); border-radius: 18px; padding: 18px 26px; width: 530px; }
+.placement-label { white-space: normal; font-size: 18px; -unity-text-align: middle-center; }
+.reticle { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 48px; height: 48px; border-radius: 24px; border-width: 2px; border-color: rgb(61, 111, 27); color: rgb(61, 111, 27); -unity-text-align: middle-center; font-size: 32px; }
+.modal { position: absolute; left: 0; top: 70px; right: 0; bottom: 50px; justify-content: center; align-items: center; background-color: rgb(245, 248, 241); }
+.modal.loss { background-color: rgba(0, 0, 0, 0); }
+.modal-card { width: 480px; background-color: rgb(255, 255, 255); padding: 32px; border-radius: 24px; }
+.modal-title { font-size: 36px; -unity-font-style: bold; margin: 12px 0; white-space: normal; }
+.footer { position: absolute; bottom: 12px; left: 32px; right: 32px; height: 56px; flex-direction: row; align-items: center; justify-content: space-between; }
+.brand, .hero, .expression, .modal-title, Button { -unity-font-style: normal; }
+
+
+.map, .question-card, .modal-card, .placement, .level-label, .score { border-width: 1px; border-color: rgb(225, 232, 219); }
+
+
+.playing .brand, .playing #header-caption, .playing #footer-caption { display: none; }
+.playing .header { position: absolute; top: 16px; right: 32px; height: 54px; }
+#task-label { font-size: 13px; }
+.score { margin-top: 8px; }
+.island-lives { position: absolute; flex-direction: row; translate: -50% -100%; padding: 5px 8px; border-radius: 10px; background-color: rgba(255, 255, 255, .9); }
+.pixel-heart { width: 28px; height: 24px; margin: 0 3px; }
+.expression { height: 56px; margin: 0; padding: 0; -unity-text-align: middle-center; }
+#task-label { height: 22px; margin: 0; padding: 0; -unity-text-align: middle-center; }
+.feedback { height: 30px; margin: 0; padding: 0; -unity-text-align: middle-center; }

@@ -1,0 +1,68 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="screen" class="screen">
+        <ui:VisualElement name="header" class="header">
+            <ui:Label text="MATH / PIRATES" class="brand" />
+            <ui:Label name="header-caption" text="SMALL SUMS. BIG ADVENTURES." class="eyebrow" />
+            <ui:Button name="menu-button" text="Level map" class="quiet" />
+        </ui:VisualElement>
+        <ui:VisualElement name="menu" class="menu">
+            <ui:Label name="hero" text="Count.&#10;Defeat the pirates." class="hero" />
+            <ui:Label name="description" text="Solve the expression and choose the ship with the right answer. Your island needs a captain!" class="description" />
+            <ui:VisualElement class="row">
+                <ui:Button name="hearts-mode" text="5 lives" class="mode selected" />
+                <ui:Button name="practice-mode" text="Practice" class="mode" />
+            </ui:VisualElement>
+            <ui:Label name="mode-description" text="Five mistakes start a new attempt. Lives reset at each level." class="hint" />
+            <ui:VisualElement class="row">
+                <ui:Button name="flat-mode" text="On screen" class="mode selected" />
+                <ui:Button name="ar-mode" text="On my table · AR" class="mode" />
+            </ui:VisualElement>
+            <ui:Button name="start-button" text="Set sail!" class="primary" />
+            <ui:Label name="checkpoint" class="hint" />
+        </ui:VisualElement>
+        <ui:VisualElement name="map" class="map">
+            <ui:Label name="map-title" text="ADVENTURE MAP" class="eyebrow" />
+            <ui:ScrollView name="level-list" class="level-list" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" />
+            <ui:Label name="map-hint" text="Scroll to explore" class="hint" />
+        </ui:VisualElement>
+        <ui:VisualElement name="hud" class="hud" picking-mode="Ignore">
+            <ui:VisualElement class="status-row" picking-mode="Ignore">
+                <ui:Label name="level-label" class="level-label" />
+                <ui:Label name="score-label" class="score" />
+            </ui:VisualElement>
+            <ui:VisualElement name="question-card" class="question-card">
+                <ui:Label name="task-label" class="eyebrow" />
+                <ui:Label name="expression" class="expression" />
+                <ui:Label name="feedback" text="Choose the ship with the right answer" class="feedback" />
+            </ui:VisualElement>
+            <ui:VisualElement name="answers" class="answers">
+                <ui:Button name="answer-0" class="answer" />
+                <ui:Button name="answer-1" class="answer" />
+                <ui:Button name="answer-2" class="answer" />
+                <ui:Button name="answer-3" class="answer" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ship-labels" class="ship-labels" picking-mode="Ignore" />
+        <ui:VisualElement name="island-lives" class="island-lives" picking-mode="Ignore" />
+        <ui:VisualElement name="placement" class="placement">
+            <ui:Label name="ar-status" text="Looking for a surface…" class="placement-label" />
+            <ui:Button name="place-button" text="Place the island" class="primary" />
+            <ui:Button name="fallback-button" text="Play without AR" class="quiet" />
+        </ui:VisualElement>
+        <ui:VisualElement name="modal" class="modal">
+            <ui:VisualElement class="modal-card">
+                <ui:Label name="modal-kicker" text="THE ADVENTURE CONTINUES" class="eyebrow" />
+                <ui:Label name="modal-title" class="modal-title" />
+                <ui:Label name="modal-body" class="description" />
+                <ui:Button name="next-button" text="Continue" class="primary" />
+                <ui:Button name="modal-menu" text="Level map" class="quiet" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="footer">
+            <ui:Label name="footer-caption" text="ISLAND OF KNOWLEDGE / 140 LEVELS" class="eyebrow" />
+            <ui:Button name="reposition-button" text="Move the island" class="quiet" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Label name="reticle" text="+" class="reticle" picking-mode="Ignore" />
+</ui:UXML>
+

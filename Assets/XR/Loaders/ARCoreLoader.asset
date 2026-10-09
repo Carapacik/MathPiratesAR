@@ -11,4 +11,4 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06042c85f885b4d1886f3ca5a1074eca, type: 3}
   m_Name: ARCoreLoader
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Unity.XR.ARCore::UnityEngine.XR.ARCore.ARCoreLoader

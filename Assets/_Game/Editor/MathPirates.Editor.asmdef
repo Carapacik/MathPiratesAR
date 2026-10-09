@@ -1,0 +1,6 @@
+{
+  "name": "MathPirates.Editor",
+  "rootNamespace": "MathPirates.Editor",
+  "includePlatforms": ["Editor"],
+  "references": ["MathPirates.Runtime", "MathPirates.Domain", "Unity.InputSystem", "Unity.XR.ARFoundation", "Unity.XR.ARSubsystems", "Unity.XR.CoreUtils", "Unity.XR.Management", "Unity.XR.Management.Editor", "Unity.XR.ARCore.Editor", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.Editor"]
+}

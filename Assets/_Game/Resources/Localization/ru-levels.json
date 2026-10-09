@@ -1,0 +1,592 @@
+{
+  "entries": [
+    {
+      "key": "section.addition",
+      "value": "Бухта сложения"
+    },
+    {
+      "key": "level.addition-1",
+      "value": "Сложение · 01"
+    },
+    {
+      "key": "level.addition-2",
+      "value": "Сложение · 02"
+    },
+    {
+      "key": "level.addition-3",
+      "value": "Сложение · 03"
+    },
+    {
+      "key": "level.addition-4",
+      "value": "Сложение · 04"
+    },
+    {
+      "key": "level.addition-5",
+      "value": "Сложение · 05"
+    },
+    {
+      "key": "level.addition-6",
+      "value": "Сложение · 06"
+    },
+    {
+      "key": "level.addition-7",
+      "value": "Сложение · 07"
+    },
+    {
+      "key": "level.addition-8",
+      "value": "Сложение · 08"
+    },
+    {
+      "key": "level.addition-9",
+      "value": "Сложение · 09"
+    },
+    {
+      "key": "level.addition-10",
+      "value": "Сложение · 10"
+    },
+    {
+      "key": "level.addition-11",
+      "value": "Сложение · 11"
+    },
+    {
+      "key": "level.addition-12",
+      "value": "Сложение · 12"
+    },
+    {
+      "key": "level.addition-13",
+      "value": "Сложение · 13"
+    },
+    {
+      "key": "level.addition-14",
+      "value": "Сложение · 14"
+    },
+    {
+      "key": "level.addition-15",
+      "value": "Сложение · 15"
+    },
+    {
+      "key": "level.addition-16",
+      "value": "Сложение · 16"
+    },
+    {
+      "key": "level.addition-17",
+      "value": "Сложение · 17"
+    },
+    {
+      "key": "level.addition-18",
+      "value": "Сложение · 18"
+    },
+    {
+      "key": "level.addition-19",
+      "value": "Сложение · 19"
+    },
+    {
+      "key": "level.addition-20",
+      "value": "Сложение · 20"
+    },
+    {
+      "key": "section.subtraction",
+      "value": "Рифы вычитания"
+    },
+    {
+      "key": "level.subtraction-1",
+      "value": "Вычитание · 01"
+    },
+    {
+      "key": "level.subtraction-2",
+      "value": "Вычитание · 02"
+    },
+    {
+      "key": "level.subtraction-3",
+      "value": "Вычитание · 03"
+    },
+    {
+      "key": "level.subtraction-4",
+      "value": "Вычитание · 04"
+    },
+    {
+      "key": "level.subtraction-5",
+      "value": "Вычитание · 05"
+    },
+    {
+      "key": "level.subtraction-6",
+      "value": "Вычитание · 06"
+    },
+    {
+      "key": "level.subtraction-7",
+      "value": "Вычитание · 07"
+    },
+    {
+      "key": "level.subtraction-8",
+      "value": "Вычитание · 08"
+    },
+    {
+      "key": "level.subtraction-9",
+      "value": "Вычитание · 09"
+    },
+    {
+      "key": "level.subtraction-10",
+      "value": "Вычитание · 10"
+    },
+    {
+      "key": "level.subtraction-11",
+      "value": "Вычитание · 11"
+    },
+    {
+      "key": "level.subtraction-12",
+      "value": "Вычитание · 12"
+    },
+    {
+      "key": "level.subtraction-13",
+      "value": "Вычитание · 13"
+    },
+    {
+      "key": "level.subtraction-14",
+      "value": "Вычитание · 14"
+    },
+    {
+      "key": "level.subtraction-15",
+      "value": "Вычитание · 15"
+    },
+    {
+      "key": "level.subtraction-16",
+      "value": "Вычитание · 16"
+    },
+    {
+      "key": "level.subtraction-17",
+      "value": "Вычитание · 17"
+    },
+    {
+      "key": "level.subtraction-18",
+      "value": "Вычитание · 18"
+    },
+    {
+      "key": "level.subtraction-19",
+      "value": "Вычитание · 19"
+    },
+    {
+      "key": "level.subtraction-20",
+      "value": "Вычитание · 20"
+    },
+    {
+      "key": "section.mixed",
+      "value": "Сложение и вычитание"
+    },
+    {
+      "key": "level.mixed-1",
+      "value": "Два действия · 01"
+    },
+    {
+      "key": "level.mixed-2",
+      "value": "Два действия · 02"
+    },
+    {
+      "key": "level.mixed-3",
+      "value": "Два действия · 03"
+    },
+    {
+      "key": "level.mixed-4",
+      "value": "Два действия · 04"
+    },
+    {
+      "key": "level.mixed-5",
+      "value": "Два действия · 05"
+    },
+    {
+      "key": "level.mixed-6",
+      "value": "Два действия · 06"
+    },
+    {
+      "key": "level.mixed-7",
+      "value": "Два действия · 07"
+    },
+    {
+      "key": "level.mixed-8",
+      "value": "Два действия · 08"
+    },
+    {
+      "key": "level.mixed-9",
+      "value": "Два действия · 09"
+    },
+    {
+      "key": "level.mixed-10",
+      "value": "Два действия · 10"
+    },
+    {
+      "key": "level.mixed-11",
+      "value": "Два действия · 11"
+    },
+    {
+      "key": "level.mixed-12",
+      "value": "Два действия · 12"
+    },
+    {
+      "key": "level.mixed-13",
+      "value": "Два действия · 13"
+    },
+    {
+      "key": "level.mixed-14",
+      "value": "Два действия · 14"
+    },
+    {
+      "key": "level.mixed-15",
+      "value": "Два действия · 15"
+    },
+    {
+      "key": "level.mixed-16",
+      "value": "Два действия · 16"
+    },
+    {
+      "key": "level.mixed-17",
+      "value": "Два действия · 17"
+    },
+    {
+      "key": "level.mixed-18",
+      "value": "Два действия · 18"
+    },
+    {
+      "key": "level.mixed-19",
+      "value": "Два действия · 19"
+    },
+    {
+      "key": "level.mixed-20",
+      "value": "Два действия · 20"
+    },
+    {
+      "key": "section.multiplication",
+      "value": "Море умножения"
+    },
+    {
+      "key": "level.multiplication-1",
+      "value": "Умножение · 01"
+    },
+    {
+      "key": "level.multiplication-2",
+      "value": "Умножение · 02"
+    },
+    {
+      "key": "level.multiplication-3",
+      "value": "Умножение · 03"
+    },
+    {
+      "key": "level.multiplication-4",
+      "value": "Умножение · 04"
+    },
+    {
+      "key": "level.multiplication-5",
+      "value": "Умножение · 05"
+    },
+    {
+      "key": "level.multiplication-6",
+      "value": "Умножение · 06"
+    },
+    {
+      "key": "level.multiplication-7",
+      "value": "Умножение · 07"
+    },
+    {
+      "key": "level.multiplication-8",
+      "value": "Умножение · 08"
+    },
+    {
+      "key": "level.multiplication-9",
+      "value": "Умножение · 09"
+    },
+    {
+      "key": "level.multiplication-10",
+      "value": "Умножение · 10"
+    },
+    {
+      "key": "level.multiplication-11",
+      "value": "Умножение · 11"
+    },
+    {
+      "key": "level.multiplication-12",
+      "value": "Умножение · 12"
+    },
+    {
+      "key": "level.multiplication-13",
+      "value": "Умножение · 13"
+    },
+    {
+      "key": "level.multiplication-14",
+      "value": "Умножение · 14"
+    },
+    {
+      "key": "level.multiplication-15",
+      "value": "Умножение · 15"
+    },
+    {
+      "key": "level.multiplication-16",
+      "value": "Умножение · 16"
+    },
+    {
+      "key": "level.multiplication-17",
+      "value": "Умножение · 17"
+    },
+    {
+      "key": "level.multiplication-18",
+      "value": "Умножение · 18"
+    },
+    {
+      "key": "level.multiplication-19",
+      "value": "Умножение · 19"
+    },
+    {
+      "key": "level.multiplication-20",
+      "value": "Умножение · 20"
+    },
+    {
+      "key": "section.mixed-three",
+      "value": "Три действия"
+    },
+    {
+      "key": "level.mixed-three-1",
+      "value": "Три действия · 01"
+    },
+    {
+      "key": "level.mixed-three-2",
+      "value": "Три действия · 02"
+    },
+    {
+      "key": "level.mixed-three-3",
+      "value": "Три действия · 03"
+    },
+    {
+      "key": "level.mixed-three-4",
+      "value": "Три действия · 04"
+    },
+    {
+      "key": "level.mixed-three-5",
+      "value": "Три действия · 05"
+    },
+    {
+      "key": "level.mixed-three-6",
+      "value": "Три действия · 06"
+    },
+    {
+      "key": "level.mixed-three-7",
+      "value": "Три действия · 07"
+    },
+    {
+      "key": "level.mixed-three-8",
+      "value": "Три действия · 08"
+    },
+    {
+      "key": "level.mixed-three-9",
+      "value": "Три действия · 09"
+    },
+    {
+      "key": "level.mixed-three-10",
+      "value": "Три действия · 10"
+    },
+    {
+      "key": "level.mixed-three-11",
+      "value": "Три действия · 11"
+    },
+    {
+      "key": "level.mixed-three-12",
+      "value": "Три действия · 12"
+    },
+    {
+      "key": "level.mixed-three-13",
+      "value": "Три действия · 13"
+    },
+    {
+      "key": "level.mixed-three-14",
+      "value": "Три действия · 14"
+    },
+    {
+      "key": "level.mixed-three-15",
+      "value": "Три действия · 15"
+    },
+    {
+      "key": "level.mixed-three-16",
+      "value": "Три действия · 16"
+    },
+    {
+      "key": "level.mixed-three-17",
+      "value": "Три действия · 17"
+    },
+    {
+      "key": "level.mixed-three-18",
+      "value": "Три действия · 18"
+    },
+    {
+      "key": "level.mixed-three-19",
+      "value": "Три действия · 19"
+    },
+    {
+      "key": "level.mixed-three-20",
+      "value": "Три действия · 20"
+    },
+    {
+      "key": "section.division",
+      "value": "Бухта деления"
+    },
+    {
+      "key": "level.division-1",
+      "value": "Деление нацело · 01"
+    },
+    {
+      "key": "level.division-2",
+      "value": "Деление нацело · 02"
+    },
+    {
+      "key": "level.division-3",
+      "value": "Деление нацело · 03"
+    },
+    {
+      "key": "level.division-4",
+      "value": "Деление нацело · 04"
+    },
+    {
+      "key": "level.division-5",
+      "value": "Деление нацело · 05"
+    },
+    {
+      "key": "level.division-6",
+      "value": "Деление нацело · 06"
+    },
+    {
+      "key": "level.division-7",
+      "value": "Деление нацело · 07"
+    },
+    {
+      "key": "level.division-8",
+      "value": "Деление нацело · 08"
+    },
+    {
+      "key": "level.division-9",
+      "value": "Деление нацело · 09"
+    },
+    {
+      "key": "level.division-10",
+      "value": "Деление нацело · 10"
+    },
+    {
+      "key": "level.division-11",
+      "value": "Деление нацело · 11"
+    },
+    {
+      "key": "level.division-12",
+      "value": "Деление нацело · 12"
+    },
+    {
+      "key": "level.division-13",
+      "value": "Деление нацело · 13"
+    },
+    {
+      "key": "level.division-14",
+      "value": "Деление нацело · 14"
+    },
+    {
+      "key": "level.division-15",
+      "value": "Деление нацело · 15"
+    },
+    {
+      "key": "level.division-16",
+      "value": "Деление нацело · 16"
+    },
+    {
+      "key": "level.division-17",
+      "value": "Деление нацело · 17"
+    },
+    {
+      "key": "level.division-18",
+      "value": "Деление нацело · 18"
+    },
+    {
+      "key": "level.division-19",
+      "value": "Деление нацело · 19"
+    },
+    {
+      "key": "level.division-20",
+      "value": "Деление нацело · 20"
+    },
+    {
+      "key": "section.mixed-four",
+      "value": "Четыре действия"
+    },
+    {
+      "key": "level.mixed-four-1",
+      "value": "Четыре действия · 01"
+    },
+    {
+      "key": "level.mixed-four-2",
+      "value": "Четыре действия · 02"
+    },
+    {
+      "key": "level.mixed-four-3",
+      "value": "Четыре действия · 03"
+    },
+    {
+      "key": "level.mixed-four-4",
+      "value": "Четыре действия · 04"
+    },
+    {
+      "key": "level.mixed-four-5",
+      "value": "Четыре действия · 05"
+    },
+    {
+      "key": "level.mixed-four-6",
+      "value": "Четыре действия · 06"
+    },
+    {
+      "key": "level.mixed-four-7",
+      "value": "Четыре действия · 07"
+    },
+    {
+      "key": "level.mixed-four-8",
+      "value": "Четыре действия · 08"
+    },
+    {
+      "key": "level.mixed-four-9",
+      "value": "Четыре действия · 09"
+    },
+    {
+      "key": "level.mixed-four-10",
+      "value": "Четыре действия · 10"
+    },
+    {
+      "key": "level.mixed-four-11",
+      "value": "Четыре действия · 11"
+    },
+    {
+      "key": "level.mixed-four-12",
+      "value": "Четыре действия · 12"
+    },
+    {
+      "key": "level.mixed-four-13",
+      "value": "Четыре действия · 13"
+    },
+    {
+      "key": "level.mixed-four-14",
+      "value": "Четыре действия · 14"
+    },
+    {
+      "key": "level.mixed-four-15",
+      "value": "Четыре действия · 15"
+    },
+    {
+      "key": "level.mixed-four-16",
+      "value": "Четыре действия · 16"
+    },
+    {
+      "key": "level.mixed-four-17",
+      "value": "Четыре действия · 17"
+    },
+    {
+      "key": "level.mixed-four-18",
+      "value": "Четыре действия · 18"
+    },
+    {
+      "key": "level.mixed-four-19",
+      "value": "Четыре действия · 19"
+    },
+    {
+      "key": "level.mixed-four-20",
+      "value": "Четыре действия · 20"
+    }
+  ]
+}

@@ -1,0 +1,592 @@
+{
+  "entries": [
+    {
+      "key": "section.addition",
+      "value": "Addition Bay"
+    },
+    {
+      "key": "level.addition-1",
+      "value": "Addition · 01"
+    },
+    {
+      "key": "level.addition-2",
+      "value": "Addition · 02"
+    },
+    {
+      "key": "level.addition-3",
+      "value": "Addition · 03"
+    },
+    {
+      "key": "level.addition-4",
+      "value": "Addition · 04"
+    },
+    {
+      "key": "level.addition-5",
+      "value": "Addition · 05"
+    },
+    {
+      "key": "level.addition-6",
+      "value": "Addition · 06"
+    },
+    {
+      "key": "level.addition-7",
+      "value": "Addition · 07"
+    },
+    {
+      "key": "level.addition-8",
+      "value": "Addition · 08"
+    },
+    {
+      "key": "level.addition-9",
+      "value": "Addition · 09"
+    },
+    {
+      "key": "level.addition-10",
+      "value": "Addition · 10"
+    },
+    {
+      "key": "level.addition-11",
+      "value": "Addition · 11"
+    },
+    {
+      "key": "level.addition-12",
+      "value": "Addition · 12"
+    },
+    {
+      "key": "level.addition-13",
+      "value": "Addition · 13"
+    },
+    {
+      "key": "level.addition-14",
+      "value": "Addition · 14"
+    },
+    {
+      "key": "level.addition-15",
+      "value": "Addition · 15"
+    },
+    {
+      "key": "level.addition-16",
+      "value": "Addition · 16"
+    },
+    {
+      "key": "level.addition-17",
+      "value": "Addition · 17"
+    },
+    {
+      "key": "level.addition-18",
+      "value": "Addition · 18"
+    },
+    {
+      "key": "level.addition-19",
+      "value": "Addition · 19"
+    },
+    {
+      "key": "level.addition-20",
+      "value": "Addition · 20"
+    },
+    {
+      "key": "section.subtraction",
+      "value": "Subtraction Reefs"
+    },
+    {
+      "key": "level.subtraction-1",
+      "value": "Subtraction · 01"
+    },
+    {
+      "key": "level.subtraction-2",
+      "value": "Subtraction · 02"
+    },
+    {
+      "key": "level.subtraction-3",
+      "value": "Subtraction · 03"
+    },
+    {
+      "key": "level.subtraction-4",
+      "value": "Subtraction · 04"
+    },
+    {
+      "key": "level.subtraction-5",
+      "value": "Subtraction · 05"
+    },
+    {
+      "key": "level.subtraction-6",
+      "value": "Subtraction · 06"
+    },
+    {
+      "key": "level.subtraction-7",
+      "value": "Subtraction · 07"
+    },
+    {
+      "key": "level.subtraction-8",
+      "value": "Subtraction · 08"
+    },
+    {
+      "key": "level.subtraction-9",
+      "value": "Subtraction · 09"
+    },
+    {
+      "key": "level.subtraction-10",
+      "value": "Subtraction · 10"
+    },
+    {
+      "key": "level.subtraction-11",
+      "value": "Subtraction · 11"
+    },
+    {
+      "key": "level.subtraction-12",
+      "value": "Subtraction · 12"
+    },
+    {
+      "key": "level.subtraction-13",
+      "value": "Subtraction · 13"
+    },
+    {
+      "key": "level.subtraction-14",
+      "value": "Subtraction · 14"
+    },
+    {
+      "key": "level.subtraction-15",
+      "value": "Subtraction · 15"
+    },
+    {
+      "key": "level.subtraction-16",
+      "value": "Subtraction · 16"
+    },
+    {
+      "key": "level.subtraction-17",
+      "value": "Subtraction · 17"
+    },
+    {
+      "key": "level.subtraction-18",
+      "value": "Subtraction · 18"
+    },
+    {
+      "key": "level.subtraction-19",
+      "value": "Subtraction · 19"
+    },
+    {
+      "key": "level.subtraction-20",
+      "value": "Subtraction · 20"
+    },
+    {
+      "key": "section.mixed",
+      "value": "Addition & Subtraction"
+    },
+    {
+      "key": "level.mixed-1",
+      "value": "Two operations · 01"
+    },
+    {
+      "key": "level.mixed-2",
+      "value": "Two operations · 02"
+    },
+    {
+      "key": "level.mixed-3",
+      "value": "Two operations · 03"
+    },
+    {
+      "key": "level.mixed-4",
+      "value": "Two operations · 04"
+    },
+    {
+      "key": "level.mixed-5",
+      "value": "Two operations · 05"
+    },
+    {
+      "key": "level.mixed-6",
+      "value": "Two operations · 06"
+    },
+    {
+      "key": "level.mixed-7",
+      "value": "Two operations · 07"
+    },
+    {
+      "key": "level.mixed-8",
+      "value": "Two operations · 08"
+    },
+    {
+      "key": "level.mixed-9",
+      "value": "Two operations · 09"
+    },
+    {
+      "key": "level.mixed-10",
+      "value": "Two operations · 10"
+    },
+    {
+      "key": "level.mixed-11",
+      "value": "Two operations · 11"
+    },
+    {
+      "key": "level.mixed-12",
+      "value": "Two operations · 12"
+    },
+    {
+      "key": "level.mixed-13",
+      "value": "Two operations · 13"
+    },
+    {
+      "key": "level.mixed-14",
+      "value": "Two operations · 14"
+    },
+    {
+      "key": "level.mixed-15",
+      "value": "Two operations · 15"
+    },
+    {
+      "key": "level.mixed-16",
+      "value": "Two operations · 16"
+    },
+    {
+      "key": "level.mixed-17",
+      "value": "Two operations · 17"
+    },
+    {
+      "key": "level.mixed-18",
+      "value": "Two operations · 18"
+    },
+    {
+      "key": "level.mixed-19",
+      "value": "Two operations · 19"
+    },
+    {
+      "key": "level.mixed-20",
+      "value": "Two operations · 20"
+    },
+    {
+      "key": "section.multiplication",
+      "value": "Multiplication Sea"
+    },
+    {
+      "key": "level.multiplication-1",
+      "value": "Multiplication · 01"
+    },
+    {
+      "key": "level.multiplication-2",
+      "value": "Multiplication · 02"
+    },
+    {
+      "key": "level.multiplication-3",
+      "value": "Multiplication · 03"
+    },
+    {
+      "key": "level.multiplication-4",
+      "value": "Multiplication · 04"
+    },
+    {
+      "key": "level.multiplication-5",
+      "value": "Multiplication · 05"
+    },
+    {
+      "key": "level.multiplication-6",
+      "value": "Multiplication · 06"
+    },
+    {
+      "key": "level.multiplication-7",
+      "value": "Multiplication · 07"
+    },
+    {
+      "key": "level.multiplication-8",
+      "value": "Multiplication · 08"
+    },
+    {
+      "key": "level.multiplication-9",
+      "value": "Multiplication · 09"
+    },
+    {
+      "key": "level.multiplication-10",
+      "value": "Multiplication · 10"
+    },
+    {
+      "key": "level.multiplication-11",
+      "value": "Multiplication · 11"
+    },
+    {
+      "key": "level.multiplication-12",
+      "value": "Multiplication · 12"
+    },
+    {
+      "key": "level.multiplication-13",
+      "value": "Multiplication · 13"
+    },
+    {
+      "key": "level.multiplication-14",
+      "value": "Multiplication · 14"
+    },
+    {
+      "key": "level.multiplication-15",
+      "value": "Multiplication · 15"
+    },
+    {
+      "key": "level.multiplication-16",
+      "value": "Multiplication · 16"
+    },
+    {
+      "key": "level.multiplication-17",
+      "value": "Multiplication · 17"
+    },
+    {
+      "key": "level.multiplication-18",
+      "value": "Multiplication · 18"
+    },
+    {
+      "key": "level.multiplication-19",
+      "value": "Multiplication · 19"
+    },
+    {
+      "key": "level.multiplication-20",
+      "value": "Multiplication · 20"
+    },
+    {
+      "key": "section.mixed-three",
+      "value": "Three Operations"
+    },
+    {
+      "key": "level.mixed-three-1",
+      "value": "Three operations · 01"
+    },
+    {
+      "key": "level.mixed-three-2",
+      "value": "Three operations · 02"
+    },
+    {
+      "key": "level.mixed-three-3",
+      "value": "Three operations · 03"
+    },
+    {
+      "key": "level.mixed-three-4",
+      "value": "Three operations · 04"
+    },
+    {
+      "key": "level.mixed-three-5",
+      "value": "Three operations · 05"
+    },
+    {
+      "key": "level.mixed-three-6",
+      "value": "Three operations · 06"
+    },
+    {
+      "key": "level.mixed-three-7",
+      "value": "Three operations · 07"
+    },
+    {
+      "key": "level.mixed-three-8",
+      "value": "Three operations · 08"
+    },
+    {
+      "key": "level.mixed-three-9",
+      "value": "Three operations · 09"
+    },
+    {
+      "key": "level.mixed-three-10",
+      "value": "Three operations · 10"
+    },
+    {
+      "key": "level.mixed-three-11",
+      "value": "Three operations · 11"
+    },
+    {
+      "key": "level.mixed-three-12",
+      "value": "Three operations · 12"
+    },
+    {
+      "key": "level.mixed-three-13",
+      "value": "Three operations · 13"
+    },
+    {
+      "key": "level.mixed-three-14",
+      "value": "Three operations · 14"
+    },
+    {
+      "key": "level.mixed-three-15",
+      "value": "Three operations · 15"
+    },
+    {
+      "key": "level.mixed-three-16",
+      "value": "Three operations · 16"
+    },
+    {
+      "key": "level.mixed-three-17",
+      "value": "Three operations · 17"
+    },
+    {
+      "key": "level.mixed-three-18",
+      "value": "Three operations · 18"
+    },
+    {
+      "key": "level.mixed-three-19",
+      "value": "Three operations · 19"
+    },
+    {
+      "key": "level.mixed-three-20",
+      "value": "Three operations · 20"
+    },
+    {
+      "key": "section.division",
+      "value": "Exact Division Cove"
+    },
+    {
+      "key": "level.division-1",
+      "value": "Exact division · 01"
+    },
+    {
+      "key": "level.division-2",
+      "value": "Exact division · 02"
+    },
+    {
+      "key": "level.division-3",
+      "value": "Exact division · 03"
+    },
+    {
+      "key": "level.division-4",
+      "value": "Exact division · 04"
+    },
+    {
+      "key": "level.division-5",
+      "value": "Exact division · 05"
+    },
+    {
+      "key": "level.division-6",
+      "value": "Exact division · 06"
+    },
+    {
+      "key": "level.division-7",
+      "value": "Exact division · 07"
+    },
+    {
+      "key": "level.division-8",
+      "value": "Exact division · 08"
+    },
+    {
+      "key": "level.division-9",
+      "value": "Exact division · 09"
+    },
+    {
+      "key": "level.division-10",
+      "value": "Exact division · 10"
+    },
+    {
+      "key": "level.division-11",
+      "value": "Exact division · 11"
+    },
+    {
+      "key": "level.division-12",
+      "value": "Exact division · 12"
+    },
+    {
+      "key": "level.division-13",
+      "value": "Exact division · 13"
+    },
+    {
+      "key": "level.division-14",
+      "value": "Exact division · 14"
+    },
+    {
+      "key": "level.division-15",
+      "value": "Exact division · 15"
+    },
+    {
+      "key": "level.division-16",
+      "value": "Exact division · 16"
+    },
+    {
+      "key": "level.division-17",
+      "value": "Exact division · 17"
+    },
+    {
+      "key": "level.division-18",
+      "value": "Exact division · 18"
+    },
+    {
+      "key": "level.division-19",
+      "value": "Exact division · 19"
+    },
+    {
+      "key": "level.division-20",
+      "value": "Exact division · 20"
+    },
+    {
+      "key": "section.mixed-four",
+      "value": "Four Operations"
+    },
+    {
+      "key": "level.mixed-four-1",
+      "value": "Four operations · 01"
+    },
+    {
+      "key": "level.mixed-four-2",
+      "value": "Four operations · 02"
+    },
+    {
+      "key": "level.mixed-four-3",
+      "value": "Four operations · 03"
+    },
+    {
+      "key": "level.mixed-four-4",
+      "value": "Four operations · 04"
+    },
+    {
+      "key": "level.mixed-four-5",
+      "value": "Four operations · 05"
+    },
+    {
+      "key": "level.mixed-four-6",
+      "value": "Four operations · 06"
+    },
+    {
+      "key": "level.mixed-four-7",
+      "value": "Four operations · 07"
+    },
+    {
+      "key": "level.mixed-four-8",
+      "value": "Four operations · 08"
+    },
+    {
+      "key": "level.mixed-four-9",
+      "value": "Four operations · 09"
+    },
+    {
+      "key": "level.mixed-four-10",
+      "value": "Four operations · 10"
+    },
+    {
+      "key": "level.mixed-four-11",
+      "value": "Four operations · 11"
+    },
+    {
+      "key": "level.mixed-four-12",
+      "value": "Four operations · 12"
+    },
+    {
+      "key": "level.mixed-four-13",
+      "value": "Four operations · 13"
+    },
+    {
+      "key": "level.mixed-four-14",
+      "value": "Four operations · 14"
+    },
+    {
+      "key": "level.mixed-four-15",
+      "value": "Four operations · 15"
+    },
+    {
+      "key": "level.mixed-four-16",
+      "value": "Four operations · 16"
+    },
+    {
+      "key": "level.mixed-four-17",
+      "value": "Four operations · 17"
+    },
+    {
+      "key": "level.mixed-four-18",
+      "value": "Four operations · 18"
+    },
+    {
+      "key": "level.mixed-four-19",
+      "value": "Four operations · 19"
+    },
+    {
+      "key": "level.mixed-four-20",
+      "value": "Four operations · 20"
+    }
+  ]
+}

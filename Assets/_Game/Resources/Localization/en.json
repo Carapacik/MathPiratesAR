@@ -1,0 +1,212 @@
+{
+  "entries": [
+    {
+      "key": "header-caption",
+      "value": "SMALL SUMS. BIG ADVENTURES."
+    },
+    {
+      "key": "menu-button",
+      "value": "Level map"
+    },
+    {
+      "key": "hero",
+      "value": "Count.\nDefeat the pirates."
+    },
+    {
+      "key": "description",
+      "value": "Solve the expression and choose the ship with the right answer. Your island needs a captain!"
+    },
+    {
+      "key": "hearts-mode",
+      "value": "5 lives"
+    },
+    {
+      "key": "practice-mode",
+      "value": "Practice"
+    },
+    {
+      "key": "mode-description",
+      "value": "Five mistakes start a new attempt. Lives reset at each level."
+    },
+    {
+      "key": "practice-description",
+      "value": "Unlimited attempts. Track your correct answers and mistakes."
+    },
+    {
+      "key": "flat-mode",
+      "value": "On screen"
+    },
+    {
+      "key": "ar-mode",
+      "value": "On my table · AR"
+    },
+    {
+      "key": "start-button",
+      "value": "Set sail!"
+    },
+    {
+      "key": "map-title",
+      "value": "ADVENTURE MAP"
+    },
+    {
+      "key": "map-hint",
+      "value": "Scroll to explore"
+    },
+    {
+      "key": "feedback",
+      "value": "Choose the ship with the right answer"
+    },
+    {
+      "key": "ar-status",
+      "value": "Looking for a surface…"
+    },
+    {
+      "key": "place-button",
+      "value": "Place the island"
+    },
+    {
+      "key": "fallback-button",
+      "value": "Play without AR"
+    },
+    {
+      "key": "modal-kicker",
+      "value": "THE ADVENTURE CONTINUES"
+    },
+    {
+      "key": "next-button",
+      "value": "Continue"
+    },
+    {
+      "key": "modal-menu",
+      "value": "Level map"
+    },
+    {
+      "key": "footer-caption",
+      "value": "ISLAND OF KNOWLEDGE / 140 LEVELS"
+    },
+    {
+      "key": "reposition-button",
+      "value": "Move the island"
+    },
+    {
+      "key": "checkpoint",
+      "value": "Level {0}: {1}. Progress is saved between levels."
+    },
+    {
+      "key": "footer-count",
+      "value": "ISLAND OF KNOWLEDGE / {0} LEVELS"
+    },
+    {
+      "key": "task-count",
+      "value": "QUESTION {0} / {1}"
+    },
+    {
+      "key": "lives",
+      "value": "Lives: {0} / 5"
+    },
+    {
+      "key": "score",
+      "value": "Correct: {0}   Mistakes: {1}"
+    },
+    {
+      "key": "correct",
+      "value": "Correct! Fire at the pirate ship!"
+    },
+    {
+      "key": "incorrect",
+      "value": "The pirates are firing! Try again."
+    },
+    {
+      "key": "lost-title",
+      "value": "Another voyage?"
+    },
+    {
+      "key": "complete-title",
+      "value": "Islands saved!"
+    },
+    {
+      "key": "level-title",
+      "value": "On to the next island!"
+    },
+    {
+      "key": "lost-body",
+      "value": "All five lives are gone. Try this level again — your knowledge stays with you."
+    },
+    {
+      "key": "result",
+      "value": "Correct answers: {0}. Mistakes: {1}."
+    },
+    {
+      "key": "complete-body",
+      "value": " You completed every question!"
+    },
+    {
+      "key": "level-body",
+      "value": " The next level is unlocked."
+    },
+    {
+      "key": "retry",
+      "value": "Try again"
+    },
+    {
+      "key": "next-level",
+      "value": "Next level"
+    },
+    {
+      "key": "ar-connecting",
+      "value": "Starting the camera…"
+    },
+    {
+      "key": "ar-platform",
+      "value": "AR requires an Android device with ARCore. You can play on screen here."
+    },
+    {
+      "key": "ar-permission",
+      "value": "Camera access is off. Enable it in Android settings or play without AR."
+    },
+    {
+      "key": "ar-config",
+      "value": "AR is not configured. You can continue without the camera."
+    },
+    {
+      "key": "ar-start",
+      "value": "Could not start ARCore. Try the on-screen mode."
+    },
+    {
+      "key": "ar-unavailable",
+      "value": "ARCore is unavailable. Use the on-screen mode."
+    },
+    {
+      "key": "ar-scan",
+      "value": "Slowly point the camera at a well-lit table or floor."
+    },
+    {
+      "key": "ar-placed",
+      "value": "Island placed"
+    },
+    {
+      "key": "ar-lost",
+      "value": "Surface tracking was lost. Slowly point the camera back at the island."
+    },
+    {
+      "key": "ar-found",
+      "value": "Surface found at the screen center. You can place the island."
+    },
+    {
+      "key": "ar-anchoring",
+      "value": "Anchoring the island…"
+    },
+    {
+      "key": "ar-search",
+      "value": "Move the camera slowly to find room on a table or floor."
+    },
+    {
+      "key": "ar-anchor-failed",
+      "value": "Could not anchor the island. Try another spot."
+    },
+    {
+      "key": "ar-place-failed",
+      "value": "Could not place the island. You can play without AR."
+    }
+  ]
+}

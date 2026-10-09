@@ -1,0 +1,5 @@
+{
+  "name": "MathPirates.Domain",
+  "rootNamespace": "MathPirates.Domain",
+  "noEngineReferences": true
+}

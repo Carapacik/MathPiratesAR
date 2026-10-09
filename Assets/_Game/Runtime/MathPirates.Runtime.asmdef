@@ -1,0 +1,5 @@
+{
+  "name": "MathPirates.Runtime",
+  "rootNamespace": "MathPirates",
+  "references": ["MathPirates.Domain", "Unity.InputSystem", "Unity.XR.ARFoundation", "Unity.XR.ARSubsystems", "Unity.XR.CoreUtils", "Unity.XR.Management", "Unity.RenderPipelines.Universal.Runtime"]
+}
